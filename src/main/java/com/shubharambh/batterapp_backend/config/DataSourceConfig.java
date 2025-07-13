@@ -32,6 +32,7 @@ public class DataSourceConfig {
     public DataSource dataSource() {
         return DataSourceBuilder.create()
                 .driverClassName("org.postgresql.Driver")
+                .type(com.zaxxer.hikari.HikariDataSource.class)
                 .url(url)
                 .username(username)
                 .password(password)
